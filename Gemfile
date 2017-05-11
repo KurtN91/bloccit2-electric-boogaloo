@@ -32,3 +32,7 @@
  gem 'turbolinks'
  
  gem 'bootstrap-sass'
+
+ gem 'tzinfo-data'
+
+ gem 'wdm', '>=0.1.0'

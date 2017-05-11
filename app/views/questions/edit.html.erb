@@ -1,0 +1,29 @@
+<h1>Edit Question</h1>
+
+<div class="row">
+    <div class="col-md-4">
+    <p>Guidlines</p>
+    <ul>
+    <li>Who cares?</li>
+    </ul>
+</div>
+<div class = "col-md-8">
+    <%= form_for @question do |x| %>
+        <div class="form-group">
+            <%= x.label :title%>
+            <%= x.text_field :title, class: 'form-control', placeholder: "Enter title"%>
+        </div>
+        <div class="form-group">
+            <%= x.label :body%>
+            <%= x.text_field :body, rows: 8, class: 'form-control', placeholder: "Enter question"%>
+        </div>
+        <div class="form-group">
+            <%= x.label :resolved%>
+            <%= x.check_box :resolved%>
+        </div>
+        <div class="form-group">
+            <%= x.submit "Save", class: 'btn btn-success'%>
+        </div>
+        <% end %>
+    </div>
+</div>
