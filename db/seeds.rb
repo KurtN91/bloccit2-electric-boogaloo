@@ -42,3 +42,15 @@ Post.find_or_create_by!(title: "This is unique", body: "this is also unique")
   puts "#{Topic.count} topics created"
  puts "#{Post.count} posts created"
  puts "#{Comment.count} comments created"
+
+ # Create Sponsored Posts
+ 50.times do
+ # #1
+   Sponsored.create!(
+ # #2
+      topic:  topics.sample,
+     title:  RandomData.random_sentence,
+     body:   RandomData.random_paragraph
+   )
+ end
+ sponsored_post = Sponsored.all
