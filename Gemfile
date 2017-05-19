@@ -37,3 +37,7 @@
  gem 'tzinfo-data'
 
  gem 'wdm', '>=0.1.0'
+
+ 
+ # Used for encrypting User passwords
+ gem 'bcrypt'
