@@ -1,6 +1,7 @@
 class User < ApplicationRecord
       has_many :posts
        before_save { self.email = email.downcase if email.present? }
+          before_save { self.role ||= :member }
 
  # #3
    validates :name, length: { minimum: 1, maximum: 100 }, presence: true
@@ -16,6 +17,8 @@ class User < ApplicationRecord
   before_save :format_name 
  # #6
    has_secure_password
+
+      enum role: [:member, :admin, :moderator]
     def format_name
         if name
             name_array = []
