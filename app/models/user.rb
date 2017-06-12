@@ -23,12 +23,6 @@ class User < ApplicationRecord
 
       enum role: [:member, :admin, :moderator]
     def format_name
-        if name
-            name_array = []
-            name split.each do |name_x|
-              name_array +=  name_x.capitalize
-            end
-            self.name = name_array.join(" ")
-        end
+        name.capitalize 
     end 
 end

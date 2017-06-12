@@ -25,7 +25,7 @@ Rails.application.configure do
 
     config.cache_store = :null_store
   end
-
+Rails.application.routes.default_url_options[:host] =  "https://bloccit2-electric-boogaloo-kevrok.c9users.io"
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 

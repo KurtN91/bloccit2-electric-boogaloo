@@ -46,13 +46,6 @@
    )
  end
  
- puts "#{Post.count}"
-Post.find_or_create_by!(title: "This is unique", body: "this is also unique")
- puts "#{Post.count}"
- 
- puts "#{Comment.count}"
- Comment.find_or_create_by(post_id: "151" , body: "This is unique too")
- puts "#{Comment.count}"
  
  admin = User.create!(
    name:     'Admin User',
@@ -75,14 +68,3 @@ Post.find_or_create_by!(title: "This is unique", body: "this is also unique")
  puts "#{Comment.count} comments created"
   puts "#{Vote.count} votes created"
 
- # Create Sponsored Posts
- 50.times do
- # #1
-   Sponsored.create!(
- # #2
-      topic:  topics.sample,
-     title:  RandomData.random_sentence,
-     body:   RandomData.random_paragraph
-   )
- end
- sponsored_post = Sponsored.all
